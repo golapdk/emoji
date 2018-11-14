@@ -1,0 +1,78 @@
+<html>
+<meta charset="utf-8">
+<script src="emojiWeb.js"></script>
+
+<h4>Normal text to Utf-8 encode text convert</h4>
+
+<textarea id="normal_text" name="escapedInput" rows="10" cols="50" style="background-color: #DFD; color:#333"></textarea>
+
+<button id="utfencode" onclick="utfencode()">Convert to utf-8</button>
+
+<textarea id="utf_encode_text" name="decode" rows="10" cols="50" style="background-color: #DFD; color:#333"></textarea>
+
+<br>
+<hr>
+
+<h4>Utf-8 encode to Normal text convert</h4>
+
+<textarea id="utf_text" name="bb" rows="10" cols="50" style="background-color: #DFD; color:#333"></textarea>
+
+<button onclick="utfdecode()">Convert to Normal text</button>
+
+<textarea id="utf_decode_text" name="f" rows="10" cols="50" style="background-color: #DFD; color:#333"></textarea>
+
+<hr>
+<br>
+
+<h4>Normal text convert to URI Encode text</h4>
+
+<textarea id="uri_text1" name="escapedInput" rows="10" cols="50" style="background-color: #DFD; color:#333"></textarea>
+
+<button  onclick="uriencode()">Convert to Normal text</button>
+
+<textarea id="uri_encode_text" name="decode" rows="10" cols="50" style="background-color: #DFD; color:#333"></textarea>
+
+<br>
+<hr>
+
+<h4>URI Decode text to Normal text convert</h4>
+
+<textarea id="uri_text" name="escapedInput" rows="10" cols="50" style="background-color: #DFD; color:#333"></textarea>
+
+<button  onclick="uridecode()">Convert to Normal text</button>
+
+<textarea id="uri_docode_text" name="decode" rows="10" cols="50" style="background-color: #DFD; color:#333"></textarea>
+
+<br>
+<hr>
+
+
+
+<script type="text/javascript">
+function utfencode() {
+	//call emoji_encode example
+	var em = emoji_encode(document.getElementById('normal_text').value);
+   	document.getElementById("utf_encode_text").innerHTML = em;	
+}
+function utfdecode() {
+	//call emoji_decode example
+	var em = emoji_decode(document.getElementById('utf_text').value);
+   	document.getElementById("utf_decode_text").innerHTML = em;	
+}
+function uriencode() {
+	//call emoji_decode example
+	var em = encodeuri(document.getElementById('uri_text1').value);
+   	document.getElementById("uri_encode_text").innerHTML = em;	
+}
+function uridecode() {
+	//call emoji_decode example
+	var em = decodeuri(document.getElementById('uri_text1').value);
+   	document.getElementById("uri_docode_text").innerHTML = em;	
+}
+
+	
+</script>
+
+
+
+</html>
