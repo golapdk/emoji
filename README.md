@@ -1,7 +1,11 @@
 # emoji
-emoji encode decode for web application
-add the emojiWeb.js file in your project
-for encode the emoji use the emoji_encode function and pass the parameter, it will return the utf format emoji.
+emoji encode decode for web application.
+
+Add the emojiWeb.js file in your project.
+
+For utf-8 encode use the emoji_encode and emoji_decode function and pass the parameter.
+
+For uri encode use the encodeuri and decodeuri function and pass the parameter.
 
 
 
@@ -33,16 +37,16 @@ example:
       //dummy data
       var data = hi this is golap. 😀 😀 
       
-      //call the encodereview function and pass the parameter.
-      var emoji = encodereview(data)
+      //call the encodeuri function and pass the parameter.
+      var emoji = encodeuri(data)
       
-      //encodereview function return the utf format result.
+      //encodeuri function return the utf format result.
        var emoji = hi%20this%20is%20golap.%20%F0%9F%98%80%20%F0%9F%98%80
        
-       //call the decodereview function and pass the parameter.
-       var emoji = decodereview(emoji)
+       //call the decodeuri function and pass the parameter.
+       var emoji = decodeuri(emoji)
        
-      //decodereview function return the normal format result.
+      //decodeuri function return the normal format result.
        var emoji = var data = hi this is golap. 😀 😀
        
        
