@@ -2,6 +2,10 @@
 emoji encode decode for web application
 add the emojiWeb.js file in your project
 for encode the emoji use the emoji_encode function and pass the parameter, it will return the utf format emoji.
+
+
+
+
 example:
       //dummy data
       var data = hi this is golap. 😀 😀
