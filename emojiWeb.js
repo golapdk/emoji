@@ -57,6 +57,12 @@ var outputString= outputString.replace(/\\"/g, " ").replace(/\\'/g, " ");
  
 };
 
+ function dec2hex4( textString ) {
+			var hexequiv = new Array ("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F");
+			return hexequiv[(textString >> 12) & 0xF] + hexequiv[(textString >> 8) & 0xF] 
+			+ hexequiv[(textString >> 4) & 0xF] + hexequiv[textString & 0xF];
+};
+
 function emoji_decode(str) {
 if (str) {
 var decoded = str
@@ -64,5 +70,25 @@ var decoded = str
   .replace(/\\u(....)/g, function(match, p1) { return String.fromCharCode(parseInt(p1, 16))})
   .replace(/\\(\d{3})/g, function(match, p1) { return String.fromCharCode(parseInt(p1,  8))}).replace(/\\/g, " ")
 return decoded; 
-}  
-};
+  }
+}; 
+  
+  
+function encodereview(value){
+			if (value) {
+				var result = encodeURIComponent(value);
+			}else{
+				var result = "";
+			}
+			return result;
+		};
+  
+ function decodereview(value){
+			if (value) {
+				var result = decodeURIComponent(value);
+			}else{
+				var result = "";
+			}
+			return result;
+		};
+ 
