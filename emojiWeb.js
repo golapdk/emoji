@@ -15,7 +15,7 @@ var pad;
       if (0xDC00 <= cc && cc <= 0xDFFF) {
         suppCP = 0x10000 + ((highsurrogate - 0xD800) << 10) + (cc - 0xDC00); 
           suppCP -= 0x10000; 
-          outputString += '\\u'+ $scope.dec2hex4(0xD800 | (suppCP >> 10)) +'\\u'+ $scope.dec2hex4(0xDC00 | (suppCP & 0x3FF));
+          outputString += '\\u'+ dec2hex4(0xD800 | (suppCP >> 10)) +'\\u'+ dec2hex4(0xDC00 | (suppCP & 0x3FF));
         highsurrogate = 0;
         continue;
         }
@@ -74,7 +74,7 @@ return decoded;
 }; 
   
   
-function encodereview(value){
+function encodeuri(value){
 			if (value) {
 				var result = encodeURIComponent(value);
 			}else{
@@ -83,7 +83,7 @@ function encodereview(value){
 			return result;
 		};
   
- function decodereview(value){
+ function decodeuri(value){
 			if (value) {
 				var result = decodeURIComponent(value);
 			}else{
