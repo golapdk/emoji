@@ -7,8 +7,9 @@ for encode the emoji use the emoji_encode function and pass the parameter, it wi
 
 
 example:
+
+
       //dummy data
-      
       var data = hi this is golap. 😀 😀
       
       //call the emoji_encode function and pass the parameter.
